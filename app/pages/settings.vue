@@ -220,7 +220,12 @@ defineOgImageComponent('Default', {
                 class="w-full sm:w-auto min-w-48 bg-bg border border-border rounded-md px-3 py-2 text-sm text-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fg/50 cursor-pointer"
                 @change="setLocale(($event.target as HTMLSelectElement).value as typeof locale)"
               >
-                <option v-for="loc in availableLocales" :key="loc.code" :value="loc.code">
+                <option
+                  v-for="loc in availableLocales"
+                  :key="loc.code"
+                  :value="loc.code"
+                  :selected="locale === loc.code"
+                >
                   {{ loc.name }}
                 </option>
               </select>
