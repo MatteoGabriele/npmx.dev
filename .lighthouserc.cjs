@@ -25,7 +25,7 @@ module.exports = {
   ci: {
     collect: {
       startServerCommand: 'pnpm preview',
-      startServerReadyPattern: 'Listening',
+      startServerReadyPattern: '(Listening|Local|:3000)',
       url: [
         'http://localhost:3000/',
         'http://localhost:3000/search?q=nuxt',
