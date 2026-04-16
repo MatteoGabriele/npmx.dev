@@ -9,7 +9,7 @@ type UseClipboardAsyncOptions = {
   copiedDuring: number
 }
 
-export default function useClipboardAsync(
+export function useClipboardAsync(
   fn: () => Promise<string>,
   options?: UseClipboardAsyncOptions,
 ): UseClipboardAsyncReturn {
