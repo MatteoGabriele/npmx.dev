@@ -99,6 +99,7 @@ const {
 const { copied: copiedReadme, copy: copyReadme } = useClipboard({
   source: () => '',
   copiedDuring: 2000,
+  legacy: true,
 })
 
 function prefetchReadmeMarkdown() {
