@@ -18,16 +18,20 @@ export function useClipboardAsync(
     immediate: false,
   })
 
-  function copy() {
+  async function copy() {
     const asyncClipboard = new ClipboardItem({
       'text/plain': fn().then(text => {
         return new Blob([text], { type: 'text/plain' })
       }),
     })
 
-    copied.value = true
-    navigator.clipboard.write([asyncClipboard])
-    timeout.start()
+    try {
+      await navigator.clipboard.write([asyncClipboard])
+      copied.value = true
+      timeout.start()
+    } catch {
+      copied.value = false
+    }
   }
 
   return {
