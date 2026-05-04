@@ -91,7 +91,7 @@
     "ipaddr.js": "2.3.0",
     "marked": "18.0.0",
     "module-replacements": "3.0.0-beta.7",
-    "nuxt": "4.4.2",
+    "nuxt": "4.4.4",
     "nuxt-og-image": "^6.4.3",
     "ofetch": "1.5.1",
     "ohash": "2.0.11",
@@ -114,7 +114,7 @@
     "vue-router": "5.0.4"
   },
   "devDependencies": {
-    "@e18e/eslint-plugin": "0.3.0",
+    "@e18e/eslint-plugin": "0.4.1",
     "@intlify/core-base": "11.3.0",
     "@npm/types": "2.1.0",
     "@playwright/test": "1.58.2",
