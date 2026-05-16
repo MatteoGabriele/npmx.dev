@@ -267,7 +267,7 @@ const { selectable } = usePackageSelectionContext()
         <!-- Loading skeleton rows -->
         <template v-if="isLoading && results.length === 0">
           <tr v-for="i in 5" :key="`skeleton-${i}`" class="border-b border-border">
-            <td class="py-3 px-3 w-8">
+            <td v-if="selectable" class="py-3 px-3 w-8">
               <div class="h-4 w-4 bg-bg-muted rounded animate-pulse ms-auto" />
             </td>
             <td class="py-3 px-3">
