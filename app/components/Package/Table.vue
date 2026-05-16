@@ -96,6 +96,8 @@ const columnLabels = computed(() => ({
 function getColumnLabel(id: ColumnId): string {
   return columnLabels.value[id]
 }
+
+const { selectable } = usePackageSelectionContext()
 </script>
 
 <template>
@@ -103,7 +105,7 @@ function getColumnLabel(id: ColumnId): string {
     <table class="w-full text-start">
       <thead class="border-b border-border">
         <tr>
-          <th scope="col" class="w-8">
+          <th scope="col" class="w-8" v-if="selectable">
             <span class="sr-only">{{ getColumnLabel('selection') }}</span>
           </th>
           <!-- Name (always visible) -->
